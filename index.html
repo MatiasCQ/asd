@@ -43,6 +43,7 @@
     .content {
         display: flex;
         flex: 1;
+        flex-wrap: wrap; /* Para que los elementos se ajusten en pantallas pequeñas */
     }
     main {
         flex: 3;
@@ -94,11 +95,42 @@
         padding: 20px;
         background-color: rgba(255, 255, 255, 0.7);
     }
-</style>
 
+    /* Media Queries */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            flex-direction: column;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        main, aside {
+            margin: 10px;
+        }
+        .contenedor2 {
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h5 {
+            font-size: 30px;
+        }
+        header, footer, section, article {
+            margin: 10px;
+            padding: 10px;
+        }
+        nav {
+            margin: 10px;
+        }
+    }
+</style>
 </head>
 <body>
-
     <header>
         <h1>Descrubriendo Piura</h1>
     </header>
@@ -112,34 +144,30 @@
         </ul>
     </nav>
 
-
-        <article class="article-container">
-            <div class="contenedor2">
-                <center><h5>Piura</h5></center>
-                    <center>
-                        <h2>Antigüedad del Departamento de Piura</h2>
-                        <strong><p>Piura es uno de los departamentos más antiguos del Perú. Fue fundado el 4 de marzo de 1821 y es reconocido por ser una de las regiones que contribuyó significativamente a la independencia del país.</p></strong>
-                        <br>
-                        <br>
-                        <h2>Rasgos más Resaltantes del Departamento de Piura</h2>
-                        <strong><p>Geografía: Piura tiene una geografía diversa que va desde las áridas y desérticas costas del Pacífico hasta las fértiles tierras del valle del río Piura y las estribaciones de los Andes en su parte oriental.</p></strong>
-                        
-                        <strong><p>Clima: Es conocido por su clima árido y soleado durante la mayor parte del año, con temperaturas que pueden llegar a ser bastante altas.</p></strong>
-                        
-                        <strong><p>Cultura: La región es famosa por su rica herencia cultural, expresada en su música, danzas tradicionales como el tondero y sus festividades religiosas y folclóricas.</p></strong>
-                        
-                        <strong><p>Economía: Piura es un importante centro económico debido a su agricultura diversa, que incluye la producción de arroz, caña de azúcar, algodón, mango y otros frutos tropicales. Además, la región tiene un creciente sector comercial y turístico.</p>
-                        <br>
-                        <br>
-                        <h2>Dinstancia de Lima a Piura - Rutas</h2>
-                        <strong><p>Distancia: Aproximadamente 1,020 kilómetros (aproximadamente 634 millas) desde Lima a Piura.
-                        Rutas:
-                        Carretera Panamericana Norte: Es la ruta principal que conecta Lima con Piura. Esta carretera es parte de la red vial Panamericana que recorre todo el continente.
-                        Vía aérea: Existen vuelos diarios desde el Aeropuerto Internacional Jorge Chávez en Lima hacia el Aeropuerto Internacional Capitán FAP Guillermo Concha Iberico en Piura, lo cual es una opción rápida y cómoda para llegar.
-                        Piura, además de ser un destino turístico por sus playas y su cultura, es un centro histórico y económico vital para el desarrollo del norte peruano.</p></strong>
-                    </center>
-                </div>
-        </article>
+    <article class="article-container">
+        <div class="contenedor2">
+            <center><h5>Piura</h5></center>
+            <center>
+                <h2>Antigüedad del Departamento de Piura</h2>
+                <strong><p>Piura es uno de los departamentos más antiguos del Perú. Fue fundado el 4 de marzo de 1821 y es reconocido por ser una de las regiones que contribuyó significativamente a la independencia del país.</p></strong>
+                <br>
+                <br>
+                <h2>Rasgos más Resaltantes del Departamento de Piura</h2>
+                <strong><p>Geografía: Piura tiene una geografía diversa que va desde las áridas y desérticas costas del Pacífico hasta las fértiles tierras del valle del río Piura y las estribaciones de los Andes en su parte oriental.</p></strong>
+                <strong><p>Clima: Es conocido por su clima árido y soleado durante la mayor parte del año, con temperaturas que pueden llegar a ser bastante altas.</p></strong>
+                <strong><p>Cultura: La región es famosa por su rica herencia cultural, expresada en su música, danzas tradicionales como el tondero y sus festividades religiosas y folclóricas.</p></strong>
+                <strong><p>Economía: Piura es un importante centro económico debido a su agricultura diversa, que incluye la producción de arroz, caña de azúcar, algodón, mango y otros frutos tropicales. Además, la región tiene un creciente sector comercial y turístico.</p>
+                <br>
+                <br>
+                <h2>Dinstancia de Lima a Piura - Rutas</h2>
+                <strong><p>Distancia: Aproximadamente 1,020 kilómetros (aproximadamente 634 millas) desde Lima a Piura.
+                Rutas:
+                Carretera Panamericana Norte: Es la ruta principal que conecta Lima con Piura. Esta carretera es parte de la red vial Panamericana que recorre todo el continente.
+                Vía aérea: Existen vuelos diarios desde el Aeropuerto Internacional Jorge Chávez en Lima hacia el Aeropuerto Internacional Capitán FAP Guillermo Concha Iberico en Piura, lo cual es una opción rápida y cómoda para llegar.
+                Piura, además de ser un destino turístico por sus playas y su cultura, es un centro histórico y económico vital para el desarrollo del norte peruano.</p></strong>
+            </center>
+        </div>
+    </article>
 
 <div class="content">
     <main>
